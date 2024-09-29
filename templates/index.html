@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Text to Paragraph Generator</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Text to Paragraph Generator</h1>
+        
+        <!-- Text Input Form Only -->
+        <form method="POST">
+            <textarea name="input_text" rows="4" cols="50" placeholder="Enter your text here..."></textarea><br><br>
+            <input type="submit" value="Generate Paragraph">
+        </form>
+
+        {% if input_text %}
+            <h2>Input Text:</h2>
+            <p>{{ input_text }}</p>
+        {% endif %}
+
+        {% if output_text %}
+            <h2>Generated Paragraph:</h2>
+            <p>{{ output_text }}</p>
+        {% endif %}
+    </div>
+    
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
