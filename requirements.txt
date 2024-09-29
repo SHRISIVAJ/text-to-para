@@ -1,5 +1,5 @@
-Flask==2.0.3
-transformers==4.12.3
-torch==1.10.0
-numpy==1.21.2
-gunicorn==20.1.0  # Required to serve the app in production
+Flask
+transformers
+torch
+numpy
+gunicorn
